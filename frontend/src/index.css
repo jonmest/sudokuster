@@ -1,0 +1,175 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, sans-serif;
+}
+
+html,
+body {
+	background-color: rgb(255, 255, 255);
+}
+
+table {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.26);
+	border-spacing: 0;
+	border-collapse: collapse;
+	transition: all 0.5s;
+}
+
+ul {
+	list-style-type: none;
+}
+
+td {
+	border: 1px solid #0000005e;
+	text-align: center;
+	vertical-align: middle;
+}
+
+td input {
+	color: #000000;
+	padding: 0;
+	border: 0;
+	text-align: center;
+	width: 48px;
+	height: 48px;
+	font-size: 24px;
+	background-color: #ffffff;
+	outline: none;
+	text-transform: uppercase;
+	transition: all 0.5s;
+}
+
+input:disabled {
+	background-color: #a3e6a1;
+}
+
+tr:nth-child(3n) {
+	border-bottom: 2px solid #000000;
+}
+
+tr:nth-child(3n + 1) {
+	border-top: 2px solid #000000;
+}
+
+td:nth-child(3n) {
+	border-right: 2px solid #000000;
+}
+
+td:nth-child(3n + 1) {
+	border-left: 2px solid #000000;
+}
+
+.body {
+	width: 95%;
+	max-width: 800px;
+	margin: 96px auto 16px auto;
+	display: flex;
+}
+
+.ripple {
+	position: absolute;
+	background: #fff;
+	border-radius: 50%;
+	width: 5px;
+	height: 5px;
+	animation: ripple-effect 1.1s 1 cubic-bezier(0.42, 0, 0.58, 1);
+	opacity: 0;
+}
+
+@keyframes ripple-effect {
+	0% {
+		transform: scale(1);
+		opacity: 0.4;
+	}
+	100% {
+		transform: scale(100);
+		opacity: 0;
+	}
+}
+
+.timer {
+	color: #1565c0;
+	font-size: 32px;
+	padding: 4px;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.14);
+	text-align: center;
+}
+
+.remain-table {
+	position: relative;
+	left: 0;
+	right: 0;
+	display: inline-block;
+	margin: auto;
+}
+
+.remain-column {
+	float: left;
+	max-width: 64px;
+}
+
+.remain-cell {
+	margin: 10px;
+	text-align: center;
+	border: solid 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.remain-cell div {
+	padding: 5px 12px;
+}
+
+.bad-cell-header {
+	background-color: #1565c0;
+	color: white;
+	font-weight: bold;
+	border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+}
+
+.red {
+	background: #ff6659;
+	color: #9a0007;
+}
+
+.gray {
+	background: #808080;
+	color: #404040;
+}
+
+.floating {
+	position: fixed;
+	bottom: 64px;
+	right: 64px;
+	z-index: 20;
+}
+
+/**
+Hide scroll in number input
+**/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
